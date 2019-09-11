@@ -13,3 +13,7 @@ html {
 .words {
     display: flex;
 }
+
+#word-one, #word-two {
+    text-transform: capitalize;
+}
