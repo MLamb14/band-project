@@ -10,6 +10,7 @@ function randomWord(array) { // this function is to avoid having to make vars wi
 
 var checkBoxAdjective = document.getElementById("adj-only");
 var checkBoxNouns = document.getElementById("nouns-only");
+// need to add for loop for making the below function less repetitive
 
 function myGenerate() {
     if (checkBoxAdjective.checked == true){
