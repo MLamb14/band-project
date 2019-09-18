@@ -12,6 +12,7 @@ html {
 
 .words {
     display: flex;
+    justify-content: center;
 }
 
 #word-one, #word-two {
