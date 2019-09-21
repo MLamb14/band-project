@@ -15,10 +15,12 @@ let checkBoxNouns = document.getElementById("nouns-only");
 // need to add for loop for making the below function less repetitive
 
 function myGenerate() {
-    if (checkBoxAdjective.checked == true){
+    if (checkBoxAdjective.checked === true && checkBoxNouns.checked === true) {
+        alert('You can only select one option.')
+    } else if (checkBoxAdjective.checked === true){
     document.getElementById("word-one").innerHTML = randomWord(adjectives);
     document.getElementById("word-two").innerHTML = randomWord(adjectives);
-    } else if (checkBoxNouns.checked == true){
+    } else if (checkBoxNouns.checked === true){
         document.getElementById("word-one").innerHTML = randomWord(nouns);
         document.getElementById("word-two").innerHTML = randomWord(nouns);
         }
@@ -26,5 +28,7 @@ function myGenerate() {
             document.getElementById("word-one").innerHTML = randomWord(adjectives);
             document.getElementById("word-two").innerHTML = randomWord(nouns);
         }
-} // this function replaces Word One and Two with random ones from the array above
-// Added if and else so checkboxes can modify the results/arrays used
+}
+/* this function replaces Word One and Two with random ones from the array above
+ * Added if and else so checkboxes can modify the results/arrays used
+ * Alert is triggered at the start if both boxes are checked */
