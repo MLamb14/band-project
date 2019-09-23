@@ -12,10 +12,11 @@ function randomWord(array) { // this function is to avoid having to make vars wi
 
 let checkBoxAdjective = document.getElementById("adj-only");
 let checkBoxNouns = document.getElementById("nouns-only");
-// need to add for loop for making the below function less repetitive
+let bandName = `${document.getElementById("word-one").innerHTML + " " + document.getElementById("word-two").innerHTML}`;
+// the above variable is the generated band name, used with the Wikipedia API
 
 function myGenerate() {
-    if (checkBoxAdjective.checked === true && checkBoxNouns.checked === true) {
+    {if (checkBoxAdjective.checked === true && checkBoxNouns.checked === true) {
         alert('You can only select one option.')
     } else if (checkBoxAdjective.checked === true){
     document.getElementById("word-one").innerHTML = randomWord(adjectives);
@@ -28,6 +29,8 @@ function myGenerate() {
             document.getElementById("word-one").innerHTML = randomWord(adjectives);
             document.getElementById("word-two").innerHTML = randomWord(nouns);
         }
+    }
+    bandName = `${document.getElementById("word-one").innerHTML + " " + document.getElementById("word-two").innerHTML + " (band)"}`;
 }
 /* this function replaces Word One and Two with random ones from the array above
  * Added if and else so checkboxes can modify the results/arrays used
