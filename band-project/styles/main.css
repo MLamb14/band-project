@@ -2,7 +2,7 @@ html {
     background-color: coral
 }
 
-.header, .intro, .generate, .more-op, .words, #word-one, #word-two {
+.header, .intro, .generate, .more-op, .results, .words, .wikipedia-search, #word-one, #word-two {
     margin: auto;
     width: 50%;
     border: 3px solid white;
