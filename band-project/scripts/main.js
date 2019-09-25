@@ -30,8 +30,30 @@ function myGenerate() {
             document.getElementById("word-two").innerHTML = randomWord(nouns);
         }
     }
-    bandName = `${document.getElementById("word-one").innerHTML + " " + document.getElementById("word-two").innerHTML + " (band)"}`;
+    bandName = `${document.getElementById("word-one").innerHTML + "+" + document.getElementById("word-two").innerHTML + "+(band)"}`;
 }
 /* this function replaces Word One and Two with random ones from the array above
  * Added if and else so checkboxes can modify the results/arrays used
  * Alert is triggered at the start if both boxes are checked */
+
+ const wikiSearch = getElementById("wiki-button").innerHTML;
+
+ function bandNamePrepare() {
+     let searchQuery = bandName.trim();
+     fetchResults(searchQuery);
+ }
+
+ function fetchResults(searchQuery) {
+    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=5&srsearch=${searchQuery}`;
+    
+    fetch(endpoint)
+    .then(response => response.json())
+    .then(data => {
+        const results = data.query.search;
+        displayResults(results);
+    });
+  }
+
+function displayResults(results) {
+    console.log(results);
+  }
