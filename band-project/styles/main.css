@@ -16,5 +16,5 @@ html {
 }
 
 #word-one, #word-two {
-    text-transform: capitalize;
+   text-transform: capitalize;
 }
