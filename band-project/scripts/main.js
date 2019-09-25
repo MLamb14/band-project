@@ -36,7 +36,7 @@ function myGenerate() {
  * Added if and else so checkboxes can modify the results/arrays used
  * Alert is triggered at the start if both boxes are checked */
 
- const wikiSearch = getElementById("wiki-button").innerHTML;
+ const wikiSearch = document.getElementById("wiki-button").innerHTML;
 
  function bandNamePrepare() {
      let searchQuery = bandName.trim();
