@@ -15,6 +15,8 @@ let checkBoxNouns = document.getElementById("nouns-only");
 let bandName = `${document.getElementById("word-one").innerHTML + " " + document.getElementById("word-two").innerHTML}`;
 // the above variable is the generated band name, used with the Wikipedia API
 
+const generateButton = document.getElementById("generate-button");
+
 function myGenerate() {
     {if (checkBoxAdjective.checked === true && checkBoxNouns.checked === true) {
         alert('You can only select one option.')
@@ -35,6 +37,8 @@ function myGenerate() {
 /* this function replaces Word One and Two with random ones from the array above
  * Added if and else so checkboxes can modify the results/arrays used
  * Alert is triggered at the start if both boxes are checked */
+
+ generateButton.addEventListener("click", myGenerate);
 
  const wikiSearch = document.getElementById("wiki-button").innerHTML;
 
