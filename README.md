@@ -8,3 +8,5 @@ On the page, you are able to generate a new random band name using large arrays 
 The more interesting part was including the Wikipedia search API, to allow users to check on Wikipedia if their generated band name exists or not. Several options were considered, such as using the Spotify API, but as that now requires users to log in to use it, Wikipedia's API was chosen for ease of use by the user.
 
 The user loads the script, and when wanting to call it again, simply presses the 'r' key.
+
+The next step is to use the code in a Chrome extension.
